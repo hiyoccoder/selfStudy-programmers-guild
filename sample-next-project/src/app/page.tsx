@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,8 +12,8 @@ export default function Home() {
         height={200}
       ></Image>
       <div className="flex flex-col gap-3 ml-10">
-        <div className="text-center text-5xl">T.U</div>
-        <div className="text-left">自己紹介</div>
+        <div className="text-center text-5xl">hiyoccoder</div>
+        <div className="text-left mt-5">自己紹介</div>
         <div className="leading-lg">
           初めまして！
           <br />
@@ -21,15 +22,20 @@ export default function Home() {
           主に、HTML,CSS,JavaScriptでの開発経験があります。
           <br />
           よろしくお願いいたします！
-          <br />
         </div>
-        <div className="flex gap-5">
-          <div className="flex justify-center items-center text-center box-border h-20 w-20 rounded-full shadow-xl bg-yellow-300 hover:bg-yellow-200">
+        <div className="flex gap-5 mt-5">
+          <Link
+            href="/hobby"
+            className="flex justify-center items-center text-center box-border h-20 w-20 rounded-full shadow-xl bg-yellow-300 hover:bg-yellow-200"
+          >
             趣味
-          </div>
-          <div className="flex justify-center items-center text-center box-border h-20 w-20 rounded-full shadow-xl bg-red-300 hover:bg-red-200">
+          </Link>
+          <Link
+            href="/work"
+            className="flex justify-center items-center text-center box-border h-20 w-20 rounded-full shadow-xl bg-red-300 hover:bg-red-200"
+          >
             お仕事
-          </div>
+          </Link>
         </div>
       </div>
     </div>
